@@ -1,0 +1,90 @@
+<EARNING MASTER>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Earning Master</title>
+  <style>
+    * {margin:0; padding:0; box-sizing:border-box; font-family:"Poppins",sans-serif;}
+    body {
+      background:linear-gradient(135deg,#001F3F,#004AAD);
+      color:white; overflow-x:hidden;
+    }
+    header {
+      text-align:center; padding:40px 20px; font-size:2.2rem;
+      color:gold; font-weight:700; letter-spacing:2px;
+      animation:fadeInDown 1s ease;
+    }
+    .hero {
+      text-align:center; padding:60px 20px;
+    }
+    .hero h1 {
+      font-size:2.5rem; margin-bottom:15px; color:#FFD700;
+      animation:fadeInUp 1s ease;
+    }
+    .hero p {
+      font-size:1.1rem; margin-bottom:30px;
+      max-width:600px; margin:auto; line-height:1.6;
+    }
+    .btn {
+      background:gold; color:#001F3F; padding:14px 34px;
+      border:none; border-radius:30px; font-size:1rem;
+      font-weight:600; cursor:pointer; transition:0.3s;
+    }
+    .btn:hover {background:white; color:#004AAD; transform:scale(1.05);}
+    .features {
+      display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:25px; padding:60px 30px;
+    }
+    .card {
+      background:rgba(255,255,255,0.1);
+      border:1px solid rgba(255,255,255,0.2);
+      border-radius:16px; padding:30px;
+      text-align:center; transition:0.3s;
+    }
+    .card:hover {transform:translateY(-8px); background:rgba(255,255,255,0.15);}
+    .card h3 {color:#FFD700; margin-bottom:12px;}
+    .contact {
+      text-align:center; padding:60px 20px;
+    }
+    .contact h2 {color:#FFD700; margin-bottom:20px;}
+    footer {
+      text-align:center; padding:25px; background:#000C24;
+      color:#bbb; font-size:0.9rem;
+    }
+    @keyframes fadeInUp {from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:translateY(0);}}
+    @keyframes fadeInDown {from{opacity:0;transform:translateY(-20px);}to{opacity:1;transform:translateY(0);}}
+  </style>
+</head>
+<body>
+  <header>Earning Master 💰</header>
+
+  <section class="hero">
+    <h1>Earn Daily with Earning Master</h1>
+    <p>Watch ads, complete daily tasks, and collect points that you can redeem anytime. Fast, simple, and secure earning made for you!</p>
+    <button class="btn">Download App — Coming Soon</button>
+  </section>
+
+  <section class="features">
+    <div class="card">
+      <h3>⚡ Fast Rewards</h3>
+      <p>Earn points instantly after completing each task — no waiting, no delay!</p>
+    </div>
+    <div class="card">
+      <h3>🔒 Secure System</h3>
+      <p>Your data and rewards are fully protected under Firebase secure cloud.</p>
+    </div>
+    <div class="card">
+      <h3>💸 Easy Redeem</h3>
+      <p>Redeem your points easily via JazzCash or Easypaisa within seconds.</p>
+    </div>
+  </section>
+
+  <section class="contact">
+    <h2>Contact Us</h2>
+    <p>📩 Email: <b>earningmasterapp@gmail.com</b></p>
+  </section>
+
+  <footer>© 2025 Earning Master. All rights reserved.</footer>
+</body>
+</html>
