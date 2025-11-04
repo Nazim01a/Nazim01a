@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Earning Master</title>
+  <style>
+    body {
+      background: #f3f4f6;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 30px;
+    }
+    h1 {
+      color: #2563eb;
+    }
+    button {
+      background: #2563eb;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      margin: 10px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    button:hover {
+      background: #1d4ed8;
+    }
+    .points {
+      font-size: 20px;
+      margin-top: 15px;
+      color: #111827;
+    }
+  </style>
+</head>
+<body>
+  <h1>💰 Earning Master 💰</h1>
+  <p>Watch ads & complete tasks to earn points!</p>
+
+  <div class="points">Your Points: <span id="points">0</span></div>
+
+  <button onclick="watchAd()">Watch Ad</button>
+  <button onclick="dailyTask()">Daily Task</button>
+  <button onclick="redeem()">Redeem</button>
+
+  <script>
+    // Basic point system (Firebase not connected yet)
+    let points = 0;
+
+    function updatePoints() {
+      document.getElementById("points").textContent = points;
+      localStorage.setItem("userPoints", points);
+    }
+
+    function loadPoints() {
+      const saved = localStorage.getItem("userPoints");
+      if (saved) {
+        points = parseInt(saved);
+        updatePoints();
+      }
+    }
+
+    function watchAd() {
+      points += 10;
+      alert("You earned 10 points from watching an ad!");
+      updatePoints();
+    }
+
+    function dailyTask() {
+      points += 20;
+      alert("You completed a daily task and earned 20 points!");
+      updatePoints();
+    }
+
+    function redeem() {
+      if (points >= 100) {
+        points -= 100;
+        alert("Redeem successful! 100 points deducted.");
+      } else {
+        alert("Not enough points to redeem!");
+      }
+      updatePoints();
+    }
+
+    loadPoints();
+  </script>
+</body>
+</html>
